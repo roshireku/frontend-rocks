@@ -32,8 +32,8 @@ export const App = () => {
              Hai guadagnato {count}€
           </button>
           <button
-          className="bg-red-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-red-600 transition-colors shadow"
-          onClick={() => setTitle((title))}
+          className="bg-red-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-red-600 transition-colors"
+          onClick={() => setTitle("MAKE MONEY")}
           >
             cambia titolo
           </button>
