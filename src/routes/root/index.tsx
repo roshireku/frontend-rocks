@@ -1,41 +1,55 @@
-import { useState } from "react";
+import {Card} from "../../component/Grind/card"
 export const RootRoute=() => {
-    const [count, setCount] = useState(0);
-    const [titolo, setTitle] = useState("CLICK FOR MONEY");
-    return (
-        <div className="h-dvh flex flex-col items-center justify-center">
-          <div className="bg-white p-8 rounded-md ">
-            <h1 className="text-center font-bold text-3xl text-blue-400 mb-4">
-              {titolo}
-            </h1>
-    
-            <h2 className="text-center font-bold text-xl mb-6 text-white">1 CLICK = 1€</h2>
-    
-            <div className="flex flex-col items-center space-y-4">
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-blue-600 transition-colors"
-                onClick={() => setCount((count) => count + 1)}
-              >
-                hai ottenuto {count}€
-              </button>
-    
-              <button
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-blue-600 transition-colors"
-                  onClick={() => setTitle("NO MONEY AVALABLE")}
-              >
-                Cambia
-              </button>
-    
-              <p className="text-center text-white">
-                Modifica <code>src/App.tsx</code> e salva per testare l'hot reload
-              </p>
-            </div>
-
-            <a href="/details/0">LINK</a>
-            
-            
-            <p className="text-center text-sm text-blue-400">Clicca sui loghi per saperne di più</p>
-          </div>
-        </div>
-      );
-}
+  return <div 
+  className="flex flex-wrap space-x-4"
+  >{data.map((item) => <Card
+    key={item.id} 
+    id={item.id}
+    name={item.name} 
+    image={item.image}
+    types={item.types}
+    />)}</div>};
+const data = [
+  {
+    id: 1,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    name: "Bulbasaur",
+    types: ["grass", "poison"],
+  },
+  {
+    id: 4,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    name: "Charmander",
+    types: ["fire"],
+  },
+  {
+    id: 7,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    name: "Squirtle",
+    types: ["water"],
+  },
+  {
+    id: 10,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
+    name: "Caterpie",
+    types: ["bug"],
+  },
+  {
+    id: 25,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    name: "Pikachu",
+    types: ["electric"],
+  },
+  {
+    id: 74,
+    image:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
+    name: "Geodude",
+    types: ["rock", "ground"],
+  },
+];
