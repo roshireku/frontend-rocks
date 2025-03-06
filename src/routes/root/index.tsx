@@ -1,14 +1,15 @@
-import {Card} from "../../component/Grind/card"
+
 export const RootRoute=() => {
   return <div 
   className="flex flex-wrap space-x-4"
-  >{data.map((item) => <Card
-    key={item.id} 
-    id={item.id}
-    name={item.name} 
-    image={item.image}
-    types={item.types}
-    />)}</div>};
+  >{data.map((item) => {
+    return <div className="flex-1 bg-white w-2xs p-8 items-center justify-center">
+      <h3 className="text-center font-bold text-3xl text-red-400 mb-4">{item.name}</h3>
+      <img src={item.image} />
+      <h4 className="text-center text-3xl text-green-400 mb-2">{item.types}</h4>
+      </div>
+  })}</div>
+};
 const data = [
   {
     id: 1,
