@@ -5,7 +5,7 @@ export const AppRouter=() =>{
     return <BrowserRouter>
     <Routes>
         <Route path="/" element={<RootRoute />} />
-        <Route path="/details/:id" element={<DetailRoute />} />
+        <Route path="/frontend-rocks/details/:id" element={<DetailRoute />} />
     </Routes>
     </BrowserRouter>
     
