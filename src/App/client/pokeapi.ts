@@ -1,1 +1,0 @@
-import {Pokedex} from "pokeapi-js-wrapper"
