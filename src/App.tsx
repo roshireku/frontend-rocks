@@ -5,9 +5,6 @@ import viteLogo from "/vite.svg";
 export const App = () => {
   const [count, setCount] = useState(0);
   const [title, setTitle] = useState("ROCKS");
-  const cambiaTitolo =() => {setTitle("Charizzard");
-    document.title="Charizzard";
-  }
 
   return (
     <div className="h-dvh flex flex-col items-center justify-center">
@@ -36,7 +33,7 @@ export const App = () => {
           </button>
           <button
           className="bg-red-500 text-white px-4 py-2 rounded-md shadow-md cursor-pointer hover:bg-red-600 transition-colors shadow"
-          onClick={cambiaTitolo}
+          onClick={() => setTitle((title))}
           >
             cambia titolo
           </button>
